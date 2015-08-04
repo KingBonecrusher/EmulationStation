@@ -22,7 +22,7 @@ clear_if_changed(
   LIBCEC_INCLUDE_DIR
 )
 
-set(LIBCEC_LIBRARY_NAMES libcec.a libcec.dylib)
+set(LIBCEC_LIBRARY_NAMES libcec.so libcec.a libcec.dylib)
 
 use_pkgconfig(LIBCEC_PKGC libcec)
 
