@@ -14,7 +14,7 @@
 using namespace std;
 //using namespace PLATFORM;
 
-#define CEC_CONFIG_VERSION CEC::CEC_CLIENT_VERSION_CURRENT;
+#define CEC_CONFIG_VERSION CEC::LIBCEC_VERSION_CURRENT;
 
 #include <cecloader.h>
 
@@ -175,7 +175,7 @@ void InputManager::init()
 			// init video on targets that need this
 			gParser->InitVideoStandalone();
 
-			LOG(LogInfo) << "Initialized libCEC version " << gParser->ToString((CEC::cec_server_version)gConfig.serverVersion);
+			LOG(LogInfo) << "Initialized libCEC version " << gParser->ToString((CEC::cec_version)gConfig.serverVersion);
 
 			CEC::cec_adapter devices[10];
 			uint8_t iDevicesFound = gParser->FindAdapters(devices, 10, NULL);
